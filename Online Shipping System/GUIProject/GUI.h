@@ -483,13 +483,15 @@ namespace GUIProject {
 
 				int pri = Convert::ToInt32(textBox4->Text);
 
-
-					if (pri == 3)
-						report = report + textBox4->Text + ".High \n\n";
-					else if (pri == 2)
-						report = report + textBox4->Text + ".Medium \n\n";
-					else if (pri == 1)
-						report = report + textBox4->Text + ".Low \n\n";
+				if (pri == 3) {
+					report = report + textBox4->Text + ".High \n\n";
+				}
+				else if (pri == 2) {
+					report = report + textBox4->Text + ".Medium \n\n";
+				}
+				else if (pri == 1) {
+					report = report + textBox4->Text + ".Low \n\n";
+				}
 
 
 				pr[count - 1] = pri;
