@@ -536,9 +536,9 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 		label12->Hide();
 		label7->Text = str;
 	}
-	else
+	else {
 		label12->Text = "No order placed yet";
-
+	}
 
 }
 private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -590,8 +590,9 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 		label12->Hide();
 		label7->Text = Order;
 	}
-	else
+	else {
 		label12->Text = "No order placed yet";
+	}
 }
 private: System::Void label12_Click(System::Object^  sender, System::EventArgs^  e) {
 }
