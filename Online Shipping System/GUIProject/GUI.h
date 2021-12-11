@@ -10,9 +10,7 @@ namespace GUIProject {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	/// <summary>
-	/// Summary for GUI
-	/// </summary>
+	
 	public ref class GUI : public System::Windows::Forms::Form {
 	public:
 		GUI(void) {
@@ -20,9 +18,7 @@ namespace GUIProject {
 		}
 
 	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
+		
 		~GUI() {
 			if (components) {
 				delete components;
@@ -51,16 +47,11 @@ namespace GUIProject {
 	private: System::Windows::Forms::Button^  button4;
 
 	private:
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
+		
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
+		
 		void InitializeComponent(void)
 		{
 			this->label1 = (gcnew System::Windows::Forms::Label());
