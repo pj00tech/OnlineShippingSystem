@@ -340,8 +340,7 @@ namespace GUIProject {
 		}
 #pragma endregion
 		// Customer class.
-		ref class Customer
-		{
+		ref class Customer {
 
 			// Members.
 		public:
@@ -368,8 +367,7 @@ namespace GUIProject {
 		};
 
 		// Cookware class.
-		ref class Cookware: public Customer
-		{
+		ref class Cookware: public Customer {
 		
 		public:
 			String^ numberOfCookwareSets;
@@ -389,8 +387,7 @@ namespace GUIProject {
 		};
 
 		// Shipping class.
-		ref class Shipping : public Cookware
-		{
+		ref class Shipping : public Cookware {
 
 			// Members.
 		public:
@@ -414,8 +411,7 @@ namespace GUIProject {
 		};
 
 		// ShippingDepartment class.
-		ref class ShippingDepartment : public Shipping
-		{
+		ref class ShippingDepartment : public Shipping {
 
 		public:
 			String^ orderID;
@@ -536,7 +532,6 @@ private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  
 
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 
-
 		for (; !c1.empty(); c1.pop()) {
 			Mypriority_queue::const_reference cref = c1.top();
 		}
@@ -550,12 +545,13 @@ private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  
 			}
 		}
 		if (str != "") {
-		label12->Hide();
-		label7->Text = str;
+			label12->Hide();
+			label7->Text = str;
+		}
+		else {
+			label12->Text = "No order placed yet";
+		}
 	}
-	else
-		label12->Text = "No order placed yet";
-}
 
 	private: System::Void InsertionSort() {
 		int i, key, j;
