@@ -503,16 +503,13 @@ namespace GUIProject {
 			}catch (FormatException^ e) {
 				MessageBox::Show("Please enter integer values for Customer ID and Priority!");
 			}
-			}
+		}
 		else {
 			MessageBox::Show("Please enter all the values");
 		}
 		
 	}
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-
-	
-
 
 	InsertionSort();
 
@@ -562,13 +559,11 @@ private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  
 
 	private: System::Void InsertionSort() {
 		int i, key, j;
-			for (i = 1; i < count; i++)
-			{
+			for (i = 1; i < count; i++) {
 				key = customerID[i];
 				j = i - 1;
 
-				while (j >= 0 && customerID[j] > key)
-				{
+				while (j >= 0 && customerID[j] > key) {
 					customerID[j + 1]= customerID[j];
 					j = j - 1;
 				}
