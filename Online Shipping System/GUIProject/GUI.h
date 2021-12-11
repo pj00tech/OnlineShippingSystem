@@ -450,7 +450,6 @@ namespace GUIProject {
 
 			count = count + 1;
 
-
 			report = report + "Order ID=" + count + "  |  Customer ID=";
 			shippingdepartment->orderID = count + "";
 			report = report + textBox1->Text + "  |  Customer Name=";
@@ -476,10 +475,8 @@ namespace GUIProject {
 					report = report + textBox4->Text + ".Low \n\n";
 				}
 
-
 				pr[count - 1] = pri;
 				c1.push(pr[count - 1]);
-
 
 				Order = Order + report;
 				reportArr[count - 1] = report;
@@ -499,6 +496,7 @@ namespace GUIProject {
 		}
 		
 	}
+		
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	InsertionSort();
@@ -521,6 +519,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 	}
 
 }
+		
 private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 
@@ -563,7 +562,6 @@ private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  
 
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 	
-
 	if (Order != "") {
 		label12->Hide();
 		label7->Text = Order;
@@ -572,6 +570,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 		label12->Text = "No order placed yet";
 	}
 }
+		
 private: System::Void label12_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 };
