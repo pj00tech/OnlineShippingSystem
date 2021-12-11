@@ -13,24 +13,18 @@ namespace GUIProject {
 	/// <summary>
 	/// Summary for GUI
 	/// </summary>
-	public ref class GUI : public System::Windows::Forms::Form
-	{
+	public ref class GUI : public System::Windows::Forms::Form {
 	public:
-		GUI(void)
-		{
-			InitializeComponent();
-			
+		GUI(void) {
+			InitializeComponent();		
 		}
-
 
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~GUI()
-		{
-			if (components)
-			{
+		~GUI() {
+			if (components) {
 				delete components;
 			}
 		}
