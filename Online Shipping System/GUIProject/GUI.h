@@ -19,9 +19,7 @@ namespace GUIProject {
 		GUI(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
+			
 		}
 
 
