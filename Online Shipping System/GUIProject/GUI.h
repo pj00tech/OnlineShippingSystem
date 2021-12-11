@@ -341,11 +341,11 @@ namespace GUIProject {
 
 		}
 #pragma endregion
-		//Customer class
+		// Customer class.
 		ref class Customer
 		{
 
-			// Members
+			// Members.
 		public:
 			String^ customerName;
 			String^ customerID;
@@ -369,7 +369,7 @@ namespace GUIProject {
 			}
 		};
 
-		//Cookware class
+		// Cookware class.
 		ref class Cookware: public Customer
 		{
 		
@@ -390,11 +390,11 @@ namespace GUIProject {
 
 		};
 
-		//Shipping class
+		// Shipping class.
 		ref class Shipping : public Cookware
 		{
 
-			// Members
+			// Members.
 		public:
 			String^ shippingPriority;
 
@@ -415,7 +415,7 @@ namespace GUIProject {
 			}
 		};
 
-		//ShippingDepartment class
+		// ShippingDepartment class.
 		ref class ShippingDepartment : public Shipping
 		{
 
@@ -434,14 +434,9 @@ namespace GUIProject {
 			}
 
 			ShippingDepartment(String^ order) {
-				this->orderID = order;
-				
+				this->orderID = order;			
 			}
-
-
-
-
-
+			
 		};
 
 		int maxSize = 100;
