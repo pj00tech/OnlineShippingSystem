@@ -1,8 +1,9 @@
+//GUI header file
 #pragma once
 #include <cliext/queue>
-//#include "cookware.h"
 namespace GUIProject {
 
+	//Import libraries
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -10,7 +11,7 @@ namespace GUIProject {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	
+	//GUI class
 	public ref class GUI : public System::Windows::Forms::Form {
 	public:
 		GUI(void) {
@@ -24,6 +25,7 @@ namespace GUIProject {
 				delete components;
 			}
 		}
+	//Declare GUI Components
 	private: System::Windows::Forms::Label^  label1;
 	protected:
 	private: System::Windows::Forms::Label^  label2;
@@ -327,83 +329,100 @@ namespace GUIProject {
 		// Customer class.
 		ref class Customer {
 
-			// Members.
 		public:
+			//Customer member variables
 			String^ customerName;
 			String^ customerID;
 
+			//Default consturctor
 			Customer() {}
+			//Parametrized consturctor to take the customer ID and name as pramerters
 			Customer(String^ name) {
 				this->customerName = name;
 			}
 
+			//Function to set the customer name
 			void setCustomerName(String^ name) {
 				this->customerName = name;
 			}
+			//Function to return the customer name
 			String^ getCustomerName() {
 				return this->customerName;
 			}
+			//Function to set the customer ID
 			void setCustomerID(String^ ID) {
 				this->customerID = ID;
 			}
+			//Function to retrun the customer ID
 			String^ getCustomerID() {
 				return this->customerID;
 			}
 		};
 
-		// Cookware class.
+		// Cookware class inherits customer class
 		ref class Cookware: public Customer {
 		
 		public:
+			//Cookware member variables
 			String^ numberOfCookwareSets;
 
-			//public:
+			//Default Constructo
 			Cookware() {}
+			//Parametrized Constructor to take the number of cookware sets as pramenter.
 			Cookware(String^ sets) {
 				this->numberOfCookwareSets = sets;
 			}
+			//Function to set the number of cookware sets.
 			void setNumberOfCookwareSets(String^ sets) {
 				this->numberOfCookwareSets = sets;
 			}
+			//Function to return the number of cookware sets.
 			String^ GetNumberOfCookwareSets() {
 				return this->numberOfCookwareSets;
 			}
 
 		};
 
-		// Shipping class.
+		// Shipping class inherits cookware class
 		ref class Shipping : public Cookware {
 
-			// Members.
+		
 		public:
+			//Shipping member varaibles
 			String^ shippingPriority;
 
+			//Default consturctor
 			Shipping() {
 
 			}
+			//Parametrized consturctor to take the shipping priority as prameter.
 			Shipping(String^ priority) {
 				this->shippingPriority = priority;
 
 			}
-
+			//Funtion to set the shipping priority
 			void setShippingChoice(String^ priority) {
 				this->shippingPriority = priority;
 
 			}
+			//Funtion to return the shipping priority
 			String^ getShippingChoice() {
 				return this->shippingPriority;
 			}
 		};
 
-		// ShippingDepartment class.
+		// ShippingDepartment class inherits shipping class
 		ref class ShippingDepartment : public Shipping {
 
 		public:
+			//class member variables
 			String^ orderID;
+			
+			//Default Constructor
 			ShippingDepartment() {
 
 			}
-
+			//Parametrized Consturctor to take order number, customer ID and name, number of cookware sets and shipping priority as prameter
 			ShippingDepartment(String^ order, String^ ID, String^ name, String^ sets, String^ priority) {
 				this->orderID = order;
 				this->customerID = ID;
@@ -411,7 +430,7 @@ namespace GUIProject {
 				numberOfCookwareSets = sets;
 				this->shippingPriority = priority;
 			}
-
+			//Parametrized Consturctor to take order number as prameter
 			ShippingDepartment(String^ order) {
 				this->orderID = order;			
 			}
