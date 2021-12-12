@@ -7,14 +7,12 @@
 #include<string>
 
 // Return true when second customer has greater priority.
-bool operator<(const ShippingDepartment& c1, const ShippingDepartment& c2)
-{
+bool operator<(const ShippingDepartment& c1, const ShippingDepartment& c2) {
 
     return stoi(c1.shippingPriority) < stoi(c2.shippingPriority);
 }
 
-int main()
-{
+int main() {
 	// Declare shipping class object.
     	Shipping shipping;
 	// Declare customer class object.
