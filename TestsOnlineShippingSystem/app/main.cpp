@@ -1,4 +1,4 @@
-//Include header files
+// Include header files.
 #include "shipping.h"
 #include "customer.h"
 #include "shippingDepartment.h"
@@ -6,7 +6,7 @@
 #include <queue>
 #include<string>
 
-// Return true when second customer has greater priority
+// Return true when second customer has greater priority.
 bool operator<(const ShippingDepartment& c1, const ShippingDepartment& c2)
 {
 
@@ -15,13 +15,13 @@ bool operator<(const ShippingDepartment& c1, const ShippingDepartment& c2)
 
 int main()
 {
-	//Declare shipping class object
+	// Declare shipping class object.
     	Shipping shipping;
-	//Declare customer class object
+	// Declare customer class object.
 	Customer customer;
-	//Declare cookware class object
+	// Declare cookware class object.
 	Cookware cookware;
-	//Declare shippingdepartment class object
+	// Declare shippingdepartment class object.
 	ShippingDepartment shippingdepartment;
 
 	return 0;
