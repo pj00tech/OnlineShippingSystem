@@ -335,9 +335,12 @@ namespace GUIProject {
 			String^ customerID;
 
 			// Default constructor.
-			Customer() {}
+			Customer() {		
+			}
+			
 			// Parameterized constructor to take the customer ID and name as parameters.
-			Customer(String^ name) {
+			Customer(String^ ID, String^ name) {
+				this->customerID = ID;
 				this->customerName = name;
 			}
 
@@ -345,14 +348,17 @@ namespace GUIProject {
 			void setCustomerName(String^ name) {
 				this->customerName = name;
 			}
+			
 			// Function to return the customer name.
 			String^ getCustomerName() {
 				return this->customerName;
 			}
+			
 			// Function to set the customer ID.
 			void setCustomerID(String^ ID) {
 				this->customerID = ID;
 			}
+			
 			// Function to return the customer ID.
 			String^ getCustomerID() {
 				return this->customerID;
@@ -367,15 +373,19 @@ namespace GUIProject {
 			String^ numberOfCookwareSets;
 
 			// Default constructor.
-			Cookware() {}
+			Cookware() {		
+			}
+			
 			// Parameterized constructor to take the number of cookware sets as parameter.
 			Cookware(String^ sets) {
 				this->numberOfCookwareSets = sets;
 			}
+			
 			// Function to set the number of cookware sets.
 			void setNumberOfCookwareSets(String^ sets) {
 				this->numberOfCookwareSets = sets;
 			}
+			
 			// Function to return the number of cookware sets.
 			String^ GetNumberOfCookwareSets() {
 				return this->numberOfCookwareSets;
@@ -393,18 +403,20 @@ namespace GUIProject {
 
 			// Default constructor.
 			Shipping() {
-
 			}
+			
 			// Parameterized constructor to take the shipping priority as parameter.
 			Shipping(String^ priority) {
 				this->shippingPriority = priority;
 
 			}
+			
 			// Funtion to set the shipping priority.
 			void setShippingChoice(String^ priority) {
 				this->shippingPriority = priority;
 
 			}
+			
 			// Funtion to return the shipping priority.
 			String^ getShippingChoice() {
 				return this->shippingPriority;
@@ -420,8 +432,8 @@ namespace GUIProject {
 			
 			// Default constructor.
 			ShippingDepartment() {
-
 			}
+			
 			// Parameterized constructor to take order number, customer ID and name, number of cookware sets and shipping priority as parameters.
 			ShippingDepartment(String^ order, String^ ID, String^ name, String^ sets, String^ priority) {
 				this->orderID = order;
@@ -430,6 +442,7 @@ namespace GUIProject {
 				numberOfCookwareSets = sets;
 				this->shippingPriority = priority;
 			}
+			
 			// Parameterized Constructor to take order number as parameter.
 			ShippingDepartment(String^ order) {
 				this->orderID = order;			
