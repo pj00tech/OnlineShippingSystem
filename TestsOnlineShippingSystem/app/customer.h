@@ -5,8 +5,7 @@
 using namespace std;
 
 // Customer class.
-class Customer
-{
+class Customer {
 // Customer member variables.	
 public:
 	string customerName;
