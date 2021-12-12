@@ -1,4 +1,5 @@
-//#include "shipping.h"
+//Include header files
+#include "shipping.h"
 #include "customer.h"
 #include "shippingDepartment.h"
 #include "cookware.h"
@@ -14,9 +15,13 @@ bool operator<(const ShippingDepartment& c1, const ShippingDepartment& c2)
 
 int main()
 {
-    //Shipping shipping;
+	//Declare shipping class object
+    	Shipping shipping;
+	//Declare customer class object
 	Customer customer;
+	//Declare cookware class object
 	Cookware cookware;
+	//Declare shippingdepartment class object
 	ShippingDepartment shippingdepartment;
 
 	return 0;
