@@ -1,3 +1,4 @@
+//Shipping Department header file
 #ifndef SHIPPINGDEPARTMENT_H
 #define SHIPPINGDEPARTMENT_H
 #include <string>
@@ -6,16 +7,15 @@
 #include "shipping.h"
 using namespace std;
 
-class ShippingDepartment: public Customer, public Cookware, public Shipping
+//Shipping Department class inherits shipping class
+class ShippingDepartment: public Shipping
 {
-private:
-	// Members
+
+//Class member variables
 public:
 	string orderID;
-	//string customerName;
-	//string customerID;
-	//string numberOfCookwareSets;
 
+//Class member functions
 public:
 	ShippingDepartment();
 	ShippingDepartment(string order, string ID, string name, string sets, string priority);
