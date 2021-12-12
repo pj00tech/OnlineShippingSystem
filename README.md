@@ -8,13 +8,11 @@ How to Run this Project in Visual Studio?
 This project is developed in C++/CLI graphical user interfaces using visual studio 2019. To run this project in visual studio you just need to clone it by following the steps as follows:
 
 1. Open Visual Studio and select "Clone a repository" as given below in the screenshot.
-
  ![image](https://user-images.githubusercontent.com/92899974/145697916-3c1bb467-2d1d-46f3-be0e-01d431207a4d.png)
 
 2. Now copy the project github URL and paste as in the screenshot given below
   Project Git URL: https://github.com/pj00tech/OnlineShippingSystem.git
-
- ![image](https://user-images.githubusercontent.com/92899974/145698072-be8f73b7-9d00-4dcd-97b4-26ae0bb3d5cf.png)
+  ![image](https://user-images.githubusercontent.com/92899974/145698072-be8f73b7-9d00-4dcd-97b4-26ae0bb3d5cf.png)
 
 3. Then Select "Clone" and project will be imported into Visual Studio and you will be able to run.
 4. Here is the Final GUI after the execution
