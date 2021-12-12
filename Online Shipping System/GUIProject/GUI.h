@@ -1,9 +1,9 @@
-//GUI header file
+// GUI header file.
 #pragma once
 #include <cliext/queue>
 namespace GUIProject {
 
-	//Import libraries
+	// Import libraries.
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -11,7 +11,7 @@ namespace GUIProject {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	//GUI class
+	// GUI class.
 	public ref class GUI : public System::Windows::Forms::Form {
 	public:
 		GUI(void) {
@@ -25,7 +25,7 @@ namespace GUIProject {
 				delete components;
 			}
 		}
-	//Declare GUI Components
+	// Declare GUI Components.
 	private: System::Windows::Forms::Label^  label1;
 	protected:
 	private: System::Windows::Forms::Label^  label2;
@@ -330,99 +330,99 @@ namespace GUIProject {
 		ref class Customer {
 
 		public:
-			//Customer member variables
+			// Customer member variables.
 			String^ customerName;
 			String^ customerID;
 
-			//Default consturctor
+			// Default constructor.
 			Customer() {}
 			//Parametrized consturctor to take the customer ID and name as pramerters
 			Customer(String^ name) {
 				this->customerName = name;
 			}
 
-			//Function to set the customer name
+			// Function to set the customer name.
 			void setCustomerName(String^ name) {
 				this->customerName = name;
 			}
-			//Function to return the customer name
+			// Function to return the customer name.
 			String^ getCustomerName() {
 				return this->customerName;
 			}
-			//Function to set the customer ID
+			// Function to set the customer ID.
 			void setCustomerID(String^ ID) {
 				this->customerID = ID;
 			}
-			//Function to retrun the customer ID
+			// Function to return the customer ID.
 			String^ getCustomerID() {
 				return this->customerID;
 			}
 		};
 
-		// Cookware class inherits customer class
+		// Cookware class inherits customer class.
 		ref class Cookware: public Customer {
 		
 		public:
-			//Cookware member variables
+			// Cookware member variables.
 			String^ numberOfCookwareSets;
 
-			//Default Constructo
+			// Default constructor.
 			Cookware() {}
 			//Parametrized Constructor to take the number of cookware sets as pramenter.
 			Cookware(String^ sets) {
 				this->numberOfCookwareSets = sets;
 			}
-			//Function to set the number of cookware sets.
+			// Function to set the number of cookware sets.
 			void setNumberOfCookwareSets(String^ sets) {
 				this->numberOfCookwareSets = sets;
 			}
-			//Function to return the number of cookware sets.
+			// Function to return the number of cookware sets.
 			String^ GetNumberOfCookwareSets() {
 				return this->numberOfCookwareSets;
 			}
 
 		};
 
-		// Shipping class inherits cookware class
+		// Shipping class inherits cookware class.
 		ref class Shipping : public Cookware {
 
 		
 		public:
-			//Shipping member varaibles
+			// Shipping member variables.
 			String^ shippingPriority;
 
-			//Default consturctor
+			// Default constructor.
 			Shipping() {
 
 			}
-			//Parametrized consturctor to take the shipping priority as prameter.
+			// Parameterized constructor to take the shipping priority as parameter.
 			Shipping(String^ priority) {
 				this->shippingPriority = priority;
 
 			}
-			//Funtion to set the shipping priority
+			// Funtion to set the shipping priority.
 			void setShippingChoice(String^ priority) {
 				this->shippingPriority = priority;
 
 			}
-			//Funtion to return the shipping priority
+			// Funtion to return the shipping priority.
 			String^ getShippingChoice() {
 				return this->shippingPriority;
 			}
 		};
 
-		// ShippingDepartment class inherits shipping class
+		// ShippingDepartment class inherits shipping class.
 		ref class ShippingDepartment : public Shipping {
 
 		public:
-			//class member variables
+			// Class member variables.
 			String^ orderID;
 			
-			//Default Constructor
+			// Default constructor.
 			ShippingDepartment() {
 
 			}
-			//Parametrized Consturctor to take order number, customer ID and name, number of cookware sets and shipping priority as prameter
+			// Parameterized constructor to take order number, customer ID and name, number of cookware sets and shipping priority as parameters.
 			ShippingDepartment(String^ order, String^ ID, String^ name, String^ sets, String^ priority) {
 				this->orderID = order;
 				this->customerID = ID;
@@ -430,23 +430,23 @@ namespace GUIProject {
 				numberOfCookwareSets = sets;
 				this->shippingPriority = priority;
 			}
-			//Parametrized Consturctor to take order number as prameter
+			// Parameterized Constructor to take order number as parameter.
 			ShippingDepartment(String^ order) {
 				this->orderID = order;			
 			}
 			
 		};
 		
-		//Define maximum size of the list
+		// Define maximum size of the list.
 		int maxSize = 100;
 		
-		//Declare required classes objects
+		// Declare required classes objects.
 		ShippingDepartment^ shippingdepartment = gcnew ShippingDepartment;
 		Customer^ customer = gcnew Customer;
 		Cookware^ cookware = gcnew Cookware;
 		Shipping^ shipping = gcnew Shipping;
 
-		//Define required array lists
+		// Define required array lists.
 		array<String^>^ reportArr = gcnew array<String^>(maxSize);
 		array<int>^ pr = gcnew array<int>(maxSize);
 		array<int>^ customerID = gcnew array<int>(maxSize);
@@ -454,11 +454,11 @@ namespace GUIProject {
 		int count = 0;
 		String^ Order = "";
 		
-		//Define Priority Queues
+		// Define Priority Queues.
 		typedef cliext::priority_queue<int> Mypriority_queue;
 		Mypriority_queue c1;
 		
-	//This function will be invoked when user press "Order button" and it will take all the text fields inputs and process accordingly.
+	// This function will be invoked when user presses "Order button" and it will take all the inputs from text fields and process accordingly.
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		String^ report = "";
 
@@ -513,7 +513,7 @@ namespace GUIProject {
 		
 	}
 
-//This function will be invoked when user press "View Order Report Sorted by Customer ID" and it will process accordingly.
+// This function will be invoked when user presses "View Order Report Sorted by Customer ID" and it will process accordingly.
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	InsertionSort();
@@ -540,7 +540,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 
-	//This function will be invoked when user press "View Order Priority Report"  and it will process accordingly.
+	// This function will be invoked when user press "View Order Priority Report"  and it will process accordingly.
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 
 		for (; !c1.empty(); c1.pop()) {
@@ -564,7 +564,7 @@ private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  
 		}
 	}
 
-	//Function to implement Inserion Sort
+	// Function to implement Inserion Sort.
 	private: System::Void InsertionSort() {
 		int i, key, j;
 			for (i = 1; i < count; i++) {
@@ -579,7 +579,7 @@ private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  
 			}
 	}
 
-//This function will be invoked when user press "View Order Report by Order ID" and it will process accordingly.
+// This function will be invoked when user presses "View Order Report by Order ID" and it will process accordingly.
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 	
 	if (Order != "") {
