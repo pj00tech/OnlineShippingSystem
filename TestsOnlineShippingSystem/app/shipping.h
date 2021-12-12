@@ -7,8 +7,7 @@
 using namespace std;
 
 // Shipping class inherits cookware class.
-class Shipping: public Cookware
-{
+class Shipping: public Cookware {
 
 // Shipping member variables.
 public:
