@@ -1,17 +1,17 @@
-//Customer header file
+// Customer header file.
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 #include <string>
 using namespace std;
 
-//Customer class
+// Customer class.
 class Customer
 {
-//Customer member variables	
+// Customer member variables.	
 public:
 	string customerName;
 	string customerID;
-//Customer member functions
+// Customer member functions.
 public:
 	Customer();
 	Customer(string ID, string name);
