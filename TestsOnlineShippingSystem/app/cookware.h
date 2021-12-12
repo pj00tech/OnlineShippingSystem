@@ -5,8 +5,7 @@
 using namespace std;
 
 // Cookware class inherits customer class.
-class Cookware: public Customer
-{
+class Cookware: public Customer {
 
 // Cookware member variables.	
 public:
