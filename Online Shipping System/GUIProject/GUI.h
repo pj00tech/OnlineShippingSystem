@@ -336,7 +336,7 @@ namespace GUIProject {
 
 			// Default constructor.
 			Customer() {}
-			//Parametrized consturctor to take the customer ID and name as pramerters
+			// Parameterized constructor to take the customer ID and name as parameters.
 			Customer(String^ name) {
 				this->customerName = name;
 			}
@@ -368,7 +368,7 @@ namespace GUIProject {
 
 			// Default constructor.
 			Cookware() {}
-			//Parametrized Constructor to take the number of cookware sets as pramenter.
+			// Parameterized constructor to take the number of cookware sets as parameter.
 			Cookware(String^ sets) {
 				this->numberOfCookwareSets = sets;
 			}
