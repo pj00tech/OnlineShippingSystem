@@ -1,22 +1,22 @@
-// Incllude headear file for cookware
+// Include header file for cookware.
 #include "cookware.h"
 
-//Default Constructor
+// Default constructor.
 Cookware::Cookware() {
 
 }
 
-//Parametrized Constructor to take the number of cookware sets as pramenter.
+// Parameterized constructor to take the number of cookware sets as parameter.
 Cookware::Cookware(string sets) {
 	numberOfCookwareSets = sets;
 }
 
-//Function to set the number of cookware sets.
+// Function to set the number of cookware sets.
 void Cookware::setNumberOfCookwareSets(string sets) {
 	numberOfCookwareSets = sets;
 }
 
-//Function to return the number of cookware sets.
+// Function to return the number of cookware sets.
 string Cookware::GetNumberOfCookwareSets() {
 
 	return numberOfCookwareSets;
