@@ -439,7 +439,7 @@ namespace GUIProject {
 				this->orderID = order;
 				this->customerID = ID;
 				this->customerName = name;
-				numberOfCookwareSets = sets;
+				this->numberOfCookwareSets = sets;
 				this->shippingPriority = priority;
 			}
 			
