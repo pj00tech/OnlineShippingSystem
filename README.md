@@ -5,10 +5,12 @@ This project is a Graphical User Interface GUI application for an Online Shippin
 Online Shipping System folder contains the GUI to run for the program.  TestsOnlineShippingSystem folder contains the tests to run for the program.
 
 How to Run this Project in Visual Studio?
-This project is developed in C++/CLI graphical user interfaces using visual studio community 2019. To run this project in visual studio you just need to clone it by following the steps as follows:
+This project is developed in C++/CLI graphical user interfaces using visual studio 2019. To run this project in visual studio you just need to clone it by following the steps as follows:
 
-Open Visaul Studio
+1. Open Visual Studio and select "Clone a repository" as given below in the screenshot.
 
 ![image](https://user-images.githubusercontent.com/92899974/145697916-3c1bb467-2d1d-46f3-be0e-01d431207a4d.png)
+
+2.
 
 
