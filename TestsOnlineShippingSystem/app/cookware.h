@@ -4,8 +4,8 @@
 #include <string>
 using namespace std;
 
-//Cookware class
-class Cookware
+//Cookware class inherits customer class
+class Cookware: public Customer
 {
 
 //Cookware member variables	
