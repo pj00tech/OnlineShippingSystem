@@ -564,7 +564,7 @@ private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  
 		}
 	}
 
-	// Function to implement Inserion Sort.
+	// Function to implement Insertion Sort.
 	private: System::Void InsertionSort() {
 		int i, key, j;
 			for (i = 1; i < count; i++) {
