@@ -1,23 +1,23 @@
-//Include header file for shipping
+// Include header file for shipping.
 #include "shipping.h"
 
-//Default consturctor
+// Default constructor.
 Shipping::Shipping() {
 
 }
 
-//Parametrized consturctor to take the shipping priority as prameter.
+// Parameterized constructor to take the shipping priority as parameter.
 Shipping::Shipping(string priority) {
 	shippingPriority = priority;
 }
 
-//Funtion to set the shipping priority
+// Function to set the shipping priority.
 void Shipping::setShippingChoice(string priority) {
 	shippingPriority = priority;
 
 }
 
-//Funtion to return the shipping priority
+// Function to return the shipping priority.
 string Shipping::getShippingChoice() {
 	return shippingPriority;
 }
