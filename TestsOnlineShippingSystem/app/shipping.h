@@ -1,3 +1,4 @@
+//Shipping header file
 #ifndef SHIPPING_H
 #define SHIPPING_H
 #include <iostream>
@@ -5,13 +6,14 @@
 
 using namespace std;
 
+//Shipping class
 class Shipping
 {
 
-	// Members
+//Shipping member variables
 public:
 	string shippingPriority;
-
+//Shipping member functions
 public:
 	Shipping();
 	Shipping(string priority);
