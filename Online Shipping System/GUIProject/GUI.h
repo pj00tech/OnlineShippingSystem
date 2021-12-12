@@ -436,23 +436,29 @@ namespace GUIProject {
 			}
 			
 		};
-
+		
+		//Define maximum size of the list
 		int maxSize = 100;
+		
+		//Declare required classes objects
 		ShippingDepartment^ shippingdepartment = gcnew ShippingDepartment;
 		Customer^ customer = gcnew Customer;
 		Cookware^ cookware = gcnew Cookware;
 		Shipping^ shipping = gcnew Shipping;
 
+		//Define required array lists
 		array<String^>^ reportArr = gcnew array<String^>(maxSize);
 		array<int>^ pr = gcnew array<int>(maxSize);
 		array<int>^ customerID = gcnew array<int>(maxSize);
 		array<int>^ cid = gcnew array<int>(maxSize);
 		int count = 0;
 		String^ Order = "";
+		
+		//Define Priority Queues
 		typedef cliext::priority_queue<int> Mypriority_queue;
 		Mypriority_queue c1;
 		
-
+	//This function will be invoked when user press "Order button" and it will take all the text fields inputs and process accordingly.
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		String^ report = "";
 
@@ -506,7 +512,8 @@ namespace GUIProject {
 		}
 		
 	}
-		
+
+//This function will be invoked when user press "View Order Report Sorted by Customer ID" and it will process accordingly.
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	InsertionSort();
@@ -533,6 +540,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 
+	//This function will be invoked when user press "View Order Priority Report"  and it will process accordingly.
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 
 		for (; !c1.empty(); c1.pop()) {
@@ -556,6 +564,7 @@ private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  
 		}
 	}
 
+	//Function to implement Inserion Sort
 	private: System::Void InsertionSort() {
 		int i, key, j;
 			for (i = 1; i < count; i++) {
@@ -570,6 +579,7 @@ private: System::Void label7_Click(System::Object^  sender, System::EventArgs^  
 			}
 	}
 
+//This function will be invoked when user press "View Order Report by Order ID" and it will process accordingly.
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 	
 	if (Order != "") {
