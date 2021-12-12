@@ -1,18 +1,18 @@
-//Cookware header file
+// Cookware header file.
 #ifndef COOKWARE_H
 #define COOKWARE_H
 #include <string>
 using namespace std;
 
-//Cookware class inherits customer class
+// Cookware class inherits customer class.
 class Cookware: public Customer
 {
 
-//Cookware member variables	
+// Cookware member variables.	
 public:
 	string numberOfCookwareSets;
 	
-//Cookware member functions
+// Cookware member functions.
 public:
 	Cookware();
 	Cookware(string sets);
