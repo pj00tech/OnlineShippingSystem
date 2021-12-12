@@ -1,4 +1,4 @@
-//Shipping header file
+// Shipping header file.
 #ifndef SHIPPING_H
 #define SHIPPING_H
 #include <iostream>
@@ -6,14 +6,14 @@
 
 using namespace std;
 
-//Shipping class inherits cookware class
+// Shipping class inherits cookware class.
 class Shipping: public Cookware
 {
 
-//Shipping member variables
+// Shipping member variables.
 public:
 	string shippingPriority;
-//Shipping member functions
+// Shipping member functions.
 public:
 	Shipping();
 	Shipping(string priority);
